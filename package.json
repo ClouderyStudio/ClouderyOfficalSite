@@ -1,12 +1,11 @@
 {
-  "name": "shadcn-landing-page-template",
-  "description": "Landing page template utilizing Shadcn, React, Typescript, and Tailwind CSS for rapid development and responsive design.",
+  "name": "cloudery-official-site",
   "author": {
     "name": "MagicQiyi",
     "email": "magicqiyi@google.com",
     "url": "https://github.com/MagicalQiyi"
   },
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "keywords": [
     "react",
     "typescript",

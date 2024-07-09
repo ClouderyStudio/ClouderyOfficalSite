@@ -1,3 +1,4 @@
+import {getDelay} from "@/utils.ts";
 import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -7,12 +8,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, MessageCirclePlus } from "lucide-react";
 
 interface TeamProps {
   imageUrl: string;
   name: string;
   position: string;
+  description: string;
   socialNetworks: SociaNetworkslProps[];
 }
 
@@ -23,59 +25,162 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
-    socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
+    imageUrl: "https://q1.qlogo.cn/g?b=qq&nk=2457483710&s=100",
+    name: "云竹",
+    position: "创始人",
+    description: "你好，这里是 YZ ，24岁，是学生，对有趣的世界和可能有趣的你感到好奇，热爱Tech和ACG文化，正在尝试从事互联网产品/Web开发相关工作。",
+    socialNetworks: [ // icon改一改  bydqq 得找个加好友api
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "QQ",
+        url: "http://linkedin.com"
       },
       {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
-    socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
+        name: "Email",
+        url: "mailto:2457483710@qq.com",
       },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
+    imageUrl: "https://q1.qlogo.cn/g?b=qq&nk=2675256772&s=100",
+    name: "MagicQiyi",
+    position: "创始人",
+    description: "我是柒屹，同时也是云术工作室重要成员之一，屹立不倒。从事互联网事业及Web开发工作，也在搞关于Java的一些东西",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-
       {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:2675256772@qq.com",
       },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
+    imageUrl: "https://q1.qlogo.cn/g?b=qq&nk=953595252&s=100",
+    name: "信念",
+    position: "云术生存战争服务器服主",
+    description: "暂时没有描述",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:953595252@qq.com",
+      },
+    ],
+  },
+  {
+    imageUrl: `https://q1.qlogo.cn/g?b=qq&nk=3582126020&s=100`,
+    name: "屑北",
+    position: "MC服务器研发人",
+    description: "暂时没有描述",
+    socialNetworks: [
+      {
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:3582126020@qq.com",
+      },
+    ],
+  },
+  {
+    imageUrl: `https://q1.qlogo.cn/g?b=qq&nk=2770161886&s=100`,
+    name: "一只小小安",
+    position: "IDC项目负责人",
+    description: "暂时没有描述",
+    socialNetworks: [
+      {
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:2770161886@qq.com",
+      },
+    ],
+  },
+  {
+    imageUrl: `https://q1.qlogo.cn/g?b=qq&nk=1263115878&s=100`,
+    name: "咕噜",
+    position: "凌御大陆服务器负责人",
+    description: "暂时没有描述",
+    socialNetworks: [
+      {
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:1263115878@qq.com",
+      },
+    ],
+  },
+  {
+    imageUrl: `https://q1.qlogo.cn/g?b=qq&nk=2171587486&s=100`,
+    name: "吴詞",
+    position: "IDC项目负责人",
+    description: "暂时没有描述",
+    socialNetworks: [
+      {
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:2171587486@qq.com",
+      },
+    ],
+  },
+  {
+    imageUrl: `https://q1.qlogo.cn/g?b=qq&nk=3014786442&s=100`,
+    name: "Zero",
+    position: "群聊挂载人", // http://vip.xg.frp.one:18950/ 记得先保存内容再看 Ctrl+S保存  ok
+    description: "暂时没有描述",
+    socialNetworks: [  // 我要睡觉了 困死了 你慢慢写啊awa  qwq
+      {
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:3014786442@qq.com",
+      },
+    ],
+  },
+  {
+    imageUrl: `https://q1.qlogo.cn/g?b=qq&nk=3067315092&s=100`,
+    name: "C6H608",
+    position: "114514", // e，这人干什么的
+    description: "暂时没有描述",
+    socialNetworks: [
+      {
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:3067315092@qq.com",
+      },
+    ],
+  },
+  {
+    imageUrl: `https://q1.qlogo.cn/g?b=qq&nk=1704853359&s=100`,
+    name: "",
+    position: "专业安卓逆向、开发",
+    description: "暂时没有描述",
+    socialNetworks: [
+      {
+        name: "QQ",
+        url: "http://linkedin.com"
+      },
+      {
+        name: "Email",
+        url: "mailto:1704853359@qq.com",
       },
     ],
   },
@@ -84,14 +189,11 @@ const teamList: TeamProps[] = [
 export const Team = () => {
   const socialIcon = (iconName: string) => {
     switch (iconName) {
-      case "Linkedin":
-        return <Linkedin size="20" />;
+      case "QQ":
+        return <MessageCirclePlus />;
 
-      case "Facebook":
-        return <Facebook size="20" />;
-
-      case "Instagram":
-        return <Instagram size="20" />;
+      case "Email":
+        return <Mail />;
     }
   };
 
@@ -100,24 +202,24 @@ export const Team = () => {
       id="team"
       className="container py-24 sm:py-32"
     >
-      <h2 className="text-3xl md:text-4xl font-bold">
+      <h2 className="text-3xl md:text-4xl font-bold animate-ease-in-out text-center animate-fade-down" style={{ animationDelay: `${getDelay()}ms` }}> 
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Our Dedicated{" "}
+          我们的{" "}
         </span>
-        Crew
+        团队成员
       </h2>
 
-      <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+      <p className="mt-4 mb-10 text-xl text-muted-foreground animate-fade-down animate-ease-in-out text-center" style={{ animationDelay: `${getDelay()}ms` }}>
+        一群志远的青俊与质雅的淑女
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
         {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
+          ({ imageUrl, name, position, socialNetworks, description }: TeamProps) => (
             <Card
               key={name}
-              className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
+              className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center animate-fade-right animate-ease-in-out"
+              style={{ animationDelay: `${getDelay()}ms` }}
             >
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
                 <img
@@ -132,7 +234,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                {description}
               </CardContent>
 
               <CardFooter>

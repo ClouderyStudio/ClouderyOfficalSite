@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
-import {getDelay} from "@/App.tsx";
-
+import {getDelay} from "@/utils.ts";
 interface FeatureProps {
   icon: JSX.Element;
   title: string;

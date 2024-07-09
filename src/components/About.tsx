@@ -1,6 +1,6 @@
 import { Statistics } from "./Statistics";
 import pilot from "../assets/pilot.png";
-import {getDelay} from "@/App.tsx";
+import {getDelay} from "@/utils.ts";
 
 export const About = () => {
   return (

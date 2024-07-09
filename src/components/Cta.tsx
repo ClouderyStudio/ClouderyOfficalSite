@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import {getDelay} from "@/App.tsx";
+import { getDelay } from "@/utils.ts";
 
 export const Cta = () => {
   return (
@@ -13,17 +13,15 @@ export const Cta = () => {
       <div className="container lg:grid lg:grid-cols-2 place-items-center">
         <div className="lg:col-start-1">
           <h2 className="text-3xl md:text-4xl font-bold ">
-            All Your
+            所有你的
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               {" "}
-              Ideas & Concepts{" "}
+              想法和概念{" "}
             </span>
-            In One Interface
+            都在一个页面
           </h2>
           <p className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            beatae. Ipsa tempore ipsum iste quibusdam illum ducimus eos. Quasi,
-            sed!
+            需要这个页面吗
           </p>
         </div>
 

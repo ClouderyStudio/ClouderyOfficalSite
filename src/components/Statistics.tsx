@@ -10,7 +10,7 @@ export const Statistics = () => {
       description: "团队人数",
     },
     {
-      quantity: "400+",
+      quantity: "1000+",
       description: "涉猎人数",
     },
   ];

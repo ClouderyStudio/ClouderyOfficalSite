@@ -3,7 +3,7 @@ import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { TypeAnimation } from "react-type-animation";
-import {getDelay} from "@/App.tsx";
+import {getDelay} from "@/utils.ts";
 
 export const Hero = () => {
   return (
