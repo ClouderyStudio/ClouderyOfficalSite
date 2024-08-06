@@ -110,22 +110,12 @@ export const Footer = () => {
               论坛
             </a>
           </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="https://qm.qq.com/q/bCfy4iO6D6"
-              className="opacity-60 hover:opacity-100"
-            >
-              QQ群
-            </a>
-          </div>
         </div>
       </section>
 
       <section className="container pb-14 text-center">
         <h3>
-          &copy; Copyright 2024{" "}
+          &copy; Copyright 2022-2024{" "}
           <a
             rel="noreferrer noopener"
             target="_blank"

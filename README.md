@@ -6,4 +6,4 @@ GPL-3.0
 
 ## 贡献者
 - [MagicQiyi](https://github.com/MagicalQiyi)
-- [YZ](https://github.com/zhangye303)
+- [YZ](https://github.com/yunzhu666)
