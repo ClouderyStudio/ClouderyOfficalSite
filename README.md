@@ -2,7 +2,7 @@
 这是本工作室的官方网站，欢迎访问！
 
 ## 开源协议
-GPL-3.0
+MIT
 
 ## 贡献者
 - [MagicQiyi](https://github.com/MagicalQiyi)
